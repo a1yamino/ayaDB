@@ -1,4 +1,4 @@
-package ayadb
+package iterater
 
 type Iterater interface {
 	Next()

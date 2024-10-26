@@ -7,3 +7,7 @@ type cache struct {
 func newCache(opt *Options) *cache {
 	return &cache{}
 }
+
+func (c *cache) close() error {
+	return nil
+}
