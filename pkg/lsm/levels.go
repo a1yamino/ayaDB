@@ -26,6 +26,7 @@ func newLevelManager(opt *Options) *levelManager {
 }
 
 func (lm *levelManager) loadCache() {
+	lm.cache = newCache(lm.opt)
 }
 
 func (lm *levelManager) close() error {
@@ -71,6 +72,7 @@ func (lm *levelManager) Get(key []byte) (entry *codec.Entry, err error) {
 			return
 		}
 	}
+	return
 }
 
 func (lh *levelHandler) Get(key []byte) (*codec.Entry, error) {

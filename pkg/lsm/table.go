@@ -3,7 +3,8 @@ package lsm
 import "ayaDB/pkg/file"
 
 type table struct {
-	ss *file.SSTable
+	ss      *file.SSTable
+	idxData []byte
 }
 
 func openTable(opt *Options) *table {
